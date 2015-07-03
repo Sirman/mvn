@@ -57,4 +57,8 @@ jar的jar目标将项目主代码打包成一个名为hello-world-1.0-SNAP-SHOT.
 	mvn clean install
 之后，在target/中会看到两个jar包，一个是原始的jar，一个是带有Main-Class信息的可运行的jar，在输出目录下运行给jar文件，控制台输出Hello Maven。这正式我们想要的结果。
 
+#关于Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:test-compile (execution: default, phase: process-classes) 这种情况一般需要在修改pom.xml文件如下![](plugin-solve.png)
+
+修改是要注意pom.xml的元素，pom中的元素和html中的标签很相似，每个标签都有其意义，修改的时候可根据自己的情况灵活改写，有时按照网上所给的例子修改自己的文档，仍会报错。此时应先将报错的pom文件备份，然后再根据自己对pom元素的理解进行改写。多尝试。
+
 
